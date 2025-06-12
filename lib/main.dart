@@ -197,7 +197,7 @@ class HomeScreen extends StatelessWidget {
   Future<List<Category>> fetchCategories() async {
     try {
       final response = await http.get(
-        Uri.parse('https://rasthal.store/api/categories'),
+        Uri.parse('https://dorca.shop/api/categories'),
       );
       print('Categories API Status: ${response.statusCode}');
       print('Categories API Response: ${response.body}');
@@ -237,7 +237,7 @@ class SubcategoryScreen extends StatelessWidget {
   Future<List<Subcategory>> fetchSubcategories() async {
     try {
       final response = await http.get(
-        Uri.parse('https://rasthal.store/api/subcategories/$categoryId'),
+        Uri.parse('https://dorca.shop/api/subcategories/$categoryId'),
       );
       print('Subcategories API Status: ${response.statusCode}');
       print('Subcategories API Response: ${response.body}');
@@ -664,7 +664,7 @@ class QuotationScreen extends StatelessWidget {
   Future<void> submitQuotation(BuildContext context) async {
     try {
       final response = await http.post(
-        Uri.parse('https://rasthal.store/api/quotations'),
+        Uri.parse('https://dorca.shop/api/quotations'),
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
           'name': nameController.text,

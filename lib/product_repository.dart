@@ -14,7 +14,7 @@ class ProductRepository {
       final page = (startIndex ~/ limit) + 1;
       final response = await http.get(
         Uri.parse(
-          'https://rasthal.store/api/products/$categoryId/$subcategoryId?page=$page&per_page=$limit',
+          'https://dorca.shop/api/products/$categoryId/$subcategoryId?page=$page&per_page=$limit',
         ),
       );
 

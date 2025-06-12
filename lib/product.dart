@@ -25,7 +25,7 @@ class Product {
         imageUrl = imagePath;
       } else {
         imagePath = imagePath.startsWith('/') ? imagePath : '/$imagePath';
-        imageUrl = 'https://rasthal.store$imagePath';
+        imageUrl = 'https://dorca.shop$imagePath';
       }
     } else {
       imageUrl = 'https://picsum.photos/200/200';
